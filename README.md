@@ -26,7 +26,7 @@ In the test code `test_fastaccesslimiter.py`, we generate a list with 10,000 ran
 
 Two tests are performed with the same values, but different object instances, one test printing the results (which is slower) and the other without printing the result.
 
-<img src="images/fastaccesslimiter01.png" width="600">
+<img src="https://raw.githubusercontent.com/rabuchaim/fastaccesslimiter/main/images/fastaccesslimiter01.png" width="600">
 
 Below is a snippet of code from the test_fastaccesslimiter.py file.
 

@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='fastaccesslimiter',
-    version='0.9.0',
+    version='1.0.0',
     description="A fast, lightweight, and full-featured IP address access limiter for any Python web framework or even any application that requires an IP access check. Supports IPv4 and IPv6 simultaneously. Can handle thousands of networks in your blocklist and gets responses in less than 0.000005 seconds. And it's pure Python!",
     url='https://github.com/rabuchaim/fastaccesslimiter',
     author='Ricardo Abuchaim',
