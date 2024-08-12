@@ -262,7 +262,7 @@ As you can see, it is possible to use FastAccessLimiter with any web framework f
 
     Example:
     - get_valid_cidr('10.0.0.10/8') returns `10.0.0.0/8`
-    - get_valid_cidr('10.0.0.10') returns `10.0.0.0/32`
+    - get_valid_cidr('10.0.0.10') returns `10.0.0.10/32`
     - get_valid_cidr('a.b.c.d') returns: `None`
 
 - **`get_cidr_format(cidr)->str`**
