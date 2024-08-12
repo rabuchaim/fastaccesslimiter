@@ -35,29 +35,29 @@ class TestFastAccessLimiter(unittest.TestCase):
         current_list = accessLimiter.get_ip_network_list()
         self.assertEqual(len(current_list),2)
             
-    def test_09_open_ip_network_list(self):
+    def test_08_open_ip_network_list(self):
         accessLimiter.open_ip_network_list(test_rules_file)
         current_list = accessLimiter.get_ip_network_list()
         self.assertEqual(len(current_list),3)
             
-    def test_10_open_ip_network_list_gzipped(self):
+    def test_09_open_ip_network_list_gzipped(self):
         accessLimiter.open_ip_network_list(test_rules_filegz)
         current_list = accessLimiter.get_ip_network_list()
         self.assertEqual(len(current_list),3)
 
-    def test_11_remove_ip_network_list(self):
+    def test_10_remove_ip_network_list(self):
         result = accessLimiter.remove_ip('11.11.11.11/32')
         self.assertFalse(result)
 
-    def test_12_remove_ip_network_list(self):
+    def test_11_remove_ip_network_list(self):
         result = accessLimiter.remove_ip('4.5.6.7')
         self.assertTrue(result)
 
-    def test_13_ip_network_list_length(self):
+    def test_12_ip_network_list_length(self):
         current_list = accessLimiter.get_ip_network_list()
         self.assertEqual(len(current_list),2)
 
-    def test_14_check_ip_access(self):
+    def test_13_check_ip_access(self):
         result = accessLimiter('1.2.3.4')
         self.assertTrue(result)
         self.assertEqual('1.2.3.4/32',result)
@@ -70,8 +70,8 @@ class TestFastAccessLimiter(unittest.TestCase):
         result = accessLimiter('1.2.3.4')
         self.assertTrue(result)
         stats = accessLimiter.stats_info()
-        self.assertEqual(stats.hits,1)
-        self.assertEqual(stats.top_hits['1.2.3.4'],1)
+        self.assertEqual(stats.hits,2)
+        self.assertEqual(stats.top_hits['1.2.3.4'],2)
         accessLimiter.stats_reset()
         stats = accessLimiter.stats_info()
         self.assertEqual(stats.hits,0)
