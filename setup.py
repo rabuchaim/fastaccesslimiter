@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 
 setup(
     name='fastaccesslimiter',
-    version='1.0.0',
-    description="A fast, lightweight, and full-featured IP address access limiter for any Python web framework or even any application that requires an IP access check. Supports IPv4 and IPv6 simultaneously. Can handle thousands of networks in your blocklist and gets responses in less than 0.000005 seconds. And it's pure Python!",
+    version='2.0.0',
+    description="A fast, lightweight, and full-featured IP address access limiter for any Python web framework or even any application that requires an IP access check. Supports IPv4 and IPv6 simultaneously and detect CIDR overlaps. Can handle thousands of networks in your blocklist and gets responses in less than 0.000005 seconds. And it's pure Python!",
     url='https://github.com/rabuchaim/fastaccesslimiter',
     author='Ricardo Abuchaim',
     author_email='ricardoabuchaim@gmail.com',
@@ -28,7 +28,6 @@ setup(
             'README.md',            
             'fastaccesslimiter/__init__.py', 
             'fastaccesslimiter/fastaccesslimiter.py'
-            'fastaccesslimiter/test_fastaccesslimiter.py'
         ],
     },
     python_requires=">=3.7",    
@@ -67,7 +66,6 @@ setup(
         'Programming Language :: Python :: 3.12',
         'Programming Language :: Python :: 3.13',
         'Programming Language :: Python :: Implementation :: PyPy',
-        'License :: OSI Approved :: MIT License',
     ],
     long_description=codecs.open("README.md","r","utf-8").read(),
     long_description_content_type='text/markdown',
